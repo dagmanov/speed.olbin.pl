@@ -18,14 +18,24 @@
         }
         iframe {
             border: none;
-            width: 768px;
-            height: 576px;
+            width: 100%;
+            max-width: 768px;
+            height: calc((100vw / 4) * 3); /* Maintain 4:3 aspect ratio */
+            max-height: 576px;
+        }
+        @media (min-width: 769px) {
+            iframe {
+                width: 768px;
+                height: 576px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Ołbinska grupa speed</h1>
+        <h3>ANTON - DIABLOS + JESSIE - BORUTA + SEBA - PROSTACTWO</h3>
+
         <iframe 
             msallowfullscreen="true" 
             id="game_drop" 
