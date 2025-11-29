@@ -3,7 +3,7 @@ name: Update Memory RSS
 on:
   push:
     paths:
-      - memory.txt # реагировать только на изменения memory.txt
+      - Memory.txt # реагировать только на изменения memory.txt
 
 jobs:
   build:
@@ -24,10 +24,10 @@ jobs:
       - name: Run shuffle and generate script
         run: python shuffle_and_generate.py
 
-      - name: Commit updated memory.xml
+      - name: Commit updated Memory.xml
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add memory.xml
-          git commit -m "Update memory.xml via GitHub Action" || echo "No changes to commit"
+          git add Memory.xml
+          git commit -m "Update Memory.xml via GitHub Action" || echo "No changes to commit"
           git push
