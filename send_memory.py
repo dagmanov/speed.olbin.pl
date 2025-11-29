@@ -1,6 +1,6 @@
 import os
 import random
-from datetime import datetime
+from datetime import datetime, timezone
 
 # Папка репозитория
 repo_dir = os.path.dirname(os.path.abspath(__file__))
@@ -60,7 +60,7 @@ for line in lines:
 <item>
 <title>{task_title}</title>
 <description>Категория: {category}</description>
-<pubDate>{datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S +0000')}</pubDate>
+<pubDate>{datetime.now(timezone.utc).strftime('%a, %d %b %Y %H:%M:%S +0000')}</pubDate>
 <category>{category}</category>
 </item>
 """)
