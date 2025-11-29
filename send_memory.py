@@ -1,6 +1,9 @@
 import os
-import random
 from datetime import datetime, timezone
+import html
+
+# --- Настройки ---
+REPO_URL = "https://<username>.github.io/<repo>/Memory.xml"  # твой публичный GitHub Pages URL
 
 # Папка репозитория
 repo_dir = os.path.dirname(os.path.abspath(__file__))
@@ -8,79 +11,69 @@ repo_dir = os.path.dirname(os.path.abspath(__file__))
 txt_file = os.path.join(repo_dir, "Memory.txt")
 xml_file = os.path.join(repo_dir, "Memory.xml")
 
-# Проверяем, что Memory.txt существует
+# --- Проверяем, что Memory.txt существует ---
 if not os.path.exists(txt_file):
     print(f"Файл {txt_file} не найден! Прерываем скрипт.")
     exit(0)
 
-# Читаем Memory.txt и всегда создаём переменную lines
-lines = []
-try:
-    with open(txt_file, "r", encoding="utf-8") as f:
-        lines = [line.strip() for line in f if line.strip()]
-except Exception as e:
-    print(f"Ошибка при чтении Memory.txt: {e}")
-    exit(0)
+# --- Читаем Memory.txt ---
+with open(txt_file, "r", encoding="utf-8") as f:
+    lines = [line.strip() for line in f if line.strip()]
 
-# Если файл пустой, выходим
 if not lines:
     print("Memory.txt пустой. Выходим без изменений.")
     exit(0)
 
-# Перемешиваем задачи
-random.shuffle(lines)
+# --- Категории по символам приоритета ---
+category_map = {"!": "A", "*": "B", "-": "C", "~": "D"}
+priority_order = {"A": 1, "B": 2, "C": 3, "D": 4}
 
-# Категории
-category_map = {"!":"A", "*":"B", "-":"C", "~":"D"}
-today = datetime.today().date()
-rss_items = []
-
+# --- Сортируем задачи по приоритету ---
+tasks = []
 for line in lines:
+    symbol_task = line[0]
+    category = category_map.get(symbol_task, "D")
+    tasks.append((priority_order[category], line, category))
+
+# Сортируем по числовому приоритету (1=A, 2=B, 3=C, 4=D)
+tasks.sort(key=lambda x: x[0])
+
+# --- Создаём RSS items ---
+rss_items = []
+for idx, (_, line, category) in enumerate(tasks, start=1):
     parts = line.split("|")
-    symbol_task = parts[0].strip()
-    deadline_str = parts[1].strip() if len(parts) > 1 else ""
+    title = html.escape(line)
+    description = html.escape(parts[1].strip()) if len(parts) > 1 else ""
+    pubdate = datetime.now(timezone.utc).strftime('%a, %d %b %Y %H:%M:%S +0000')
+    guid = f"task-{idx}"
 
-    marker = ""
-    if deadline_str:
-        try:
-            deadline = datetime.strptime(deadline_str, "%Y-%m-%d").date()
-            if deadline <= today:
-                marker = " 🔴"
-        except Exception as e:
-            print(f"Неверная дата '{deadline_str}' в строке '{line}': {e}")
+    item_xml = f"""
+    <item>
+        <title>{title}</title>
+        <link>{REPO_URL}</link>
+        <description>{description}</description>
+        <category>{category}</category>
+        <guid>{guid}</guid>
+        <pubDate>{pubdate}</pubDate>
+    </item>
+    """
+    rss_items.append(item_xml)
 
-    symbol = symbol_task[0]
-    category = category_map.get(symbol, "D")
-    task_title = symbol_task[1:].strip() + marker
-
-    # Экранируем XML-символы
-    task_title = task_title.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-
-    rss_items.append(f"""
-<item>
-<title>{task_title}</title>
-<description>Категория: {category}</description>
-<pubDate>{datetime.now(timezone.utc).strftime('%a, %d %b %Y %H:%M:%S +0000')}</pubDate>
-<category>{category}</category>
-</item>
-""")
-
-# Генерируем RSS
-rss_feed = f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+# --- Формируем RSS-файл ---
+rss_feed = f"""<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<title>Memory – Мои задачи</title>
-<link>local-memory</link>
-<description>Живые обновления моих задач</description>
-{''.join(rss_items)}
+    <title>Memory – Мои задачи</title>
+    <link>{REPO_URL}</link>
+    <description>Живые обновления моих задач</description>
+    <atom:link href="{REPO_URL}" rel="self" type="application/rss+xml" />
+    {''.join(rss_items)}
 </channel>
 </rss>
 """
 
-# Сохраняем Memory.xml
-try:
-    with open(xml_file, "w", encoding="utf-8") as f:
-        f.write(rss_feed)
-    print(f"Memory.xml сгенерирован! ({len(rss_items)} задач)")
-except Exception as e:
-    print(f"Ошибка при записи Memory.xml: {e}")
+# --- Сохраняем в Memory.xml ---
+with open(xml_file, "w", encoding="utf-8") as f:
+    f.write(rss_feed.strip())
+
+print(f"Memory.xml сгенерирован! ({len(tasks)} задач)")
