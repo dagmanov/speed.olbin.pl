@@ -1,0 +1,33 @@
+name: Update Memory RSS
+
+on:
+  push:
+    paths:
+      - memory.txt # реагировать только на изменения memory.txt
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install --upgrade pip
+
+      - name: Run shuffle and generate script
+        run: python shuffle_and_generate.py
+
+      - name: Commit updated memory.xml
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add memory.xml
+          git commit -m "Update memory.xml via GitHub Action" || echo "No changes to commit"
+          git push
