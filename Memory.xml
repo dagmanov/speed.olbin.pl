@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Memory – Мои задачи</title>
+<link>local-memo</link>
+<description>Живые обновления моих задач</description>
+
+<item>
+<title>Сделать ключи</title>
+<description>Категория: A</description>
+<pubDate>Sat, 29 Nov 2025 02:16:53 +0000</pubDate>
+<category>A</category>
+</item>
+
+<item>
+<title>Сделать стрим</title>
+<description>Категория: B</description>
+<pubDate>Sat, 29 Nov 2025 02:16:53 +0000</pubDate>
+<category>B</category>
+</item>
+
+<item>
+<title>Купить что-то</title>
+<description>Категория: C</description>
+<pubDate>Sat, 29 Nov 2025 02:16:53 +0000</pubDate>
+<category>C</category>
+</item>
+
+<item>
+<title>Поехать в лес</title>
+<description>Категория: D</description>
+<pubDate>Sat, 29 Nov 2025 02:16:53 +0000</pubDate>
+<category>D</category>
+</item>
+
+</channel>
+</rss>
