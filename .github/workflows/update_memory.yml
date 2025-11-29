@@ -3,7 +3,7 @@ name: Update Memory RSS
 on:
   push:
     paths:
-      - Memory.txt # реагируем только на изменения Memory.txt
+      - Memory.txt  # реагируем только на изменения Memory.txt
 
 jobs:
   build:
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # обязательно для пуша изменений обратно
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -31,4 +33,3 @@ jobs:
           git add Memory.xml
           git commit -m "Update Memory.xml via GitHub Action" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-
