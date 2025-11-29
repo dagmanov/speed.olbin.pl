@@ -2,34 +2,104 @@
 <rss version="2.0">
 <channel>
 <title>Memory – Мои задачи</title>
-<link>local-memo</link>
+<link>local-memory</link>
 <description>Живые обновления моих задач</description>
 
 <item>
-<title>Сделать ключи</title>
-<description>Категория: A</description>
-<pubDate>Sat, 29 Nov 2025 02:16:53 +0000</pubDate>
-<category>A</category>
+<title>Поехать на машине поездить</title>
+<description>Категория: D</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>D</category>
 </item>
 
 <item>
 <title>Сделать стрим</title>
 <description>Категория: B</description>
-<pubDate>Sat, 29 Nov 2025 02:16:53 +0000</pubDate>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
 <category>B</category>
 </item>
 
 <item>
-<title>Купить что-то</title>
+<title>Организовать еду себе и Даше</title>
 <description>Категория: C</description>
-<pubDate>Sat, 29 Nov 2025 02:16:53 +0000</pubDate>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
 <category>C</category>
 </item>
 
 <item>
-<title>Поехать в лес</title>
+<title>Придумать способ стрима</title>
+<description>Категория: B</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>B</category>
+</item>
+
+<item>
+<title>Заехать в лес</title>
 <description>Категория: D</description>
-<pubDate>Sat, 29 Nov 2025 02:16:53 +0000</pubDate>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>D</category>
+</item>
+
+<item>
+<title>Сходить в магазин за плынами</title>
+<description>Категория: C</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>C</category>
+</item>
+
+<item>
+<title>Почистить что-то</title>
+<description>Категория: C</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>C</category>
+</item>
+
+<item>
+<title>Проверить и подготовить портсовню</title>
+<description>Категория: A</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>A</category>
+</item>
+
+<item>
+<title>Скинуть фотки лаптопа</title>
+<description>Категория: B</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>B</category>
+</item>
+
+<item>
+<title>Оставить ключи на Лу-Лу-Вела</title>
+<description>Категория: A</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>A</category>
+</item>
+
+<item>
+<title>Сделать ключи</title>
+<description>Категория: A</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>A</category>
+</item>
+
+<item>
+<title>YO bike trip</title>
+<description>Категория: D</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>D</category>
+</item>
+
+<item>
+<title>Почитать детектив</title>
+<description>Категория: D</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
+<category>D</category>
+</item>
+
+<item>
+<title>Поиграть в во все игры на стим</title>
+<description>Категория: D</description>
+<pubDate>Sat, 29 Nov 2025 03:22:40 +0000</pubDate>
 <category>D</category>
 </item>
 
