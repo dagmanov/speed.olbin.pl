@@ -3,14 +3,14 @@ name: Update Memory RSS
 on:
   push:
     paths:
-      - Memory.txt # реагировать только на изменения memory.txt
+      - Memory.txt # реагируем только на изменения Memory.txt
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: pip install --upgrade pip
 
-      - name: Run shuffle and generate script
-        run: python shuffle_and_generate.py
+      - name: Run shuffle and generate
+        run: python send_memory.py
 
       - name: Commit updated Memory.xml
         run: |
