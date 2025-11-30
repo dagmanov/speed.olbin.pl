@@ -12,7 +12,7 @@
         <description>2025-12-01</description>
         <category>A</category>
         <guid>task-1</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -21,7 +21,7 @@
         <description>2025-12-01</description>
         <category>A</category>
         <guid>task-2</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -30,7 +30,25 @@
         <description></description>
         <category>A</category>
         <guid>task-3</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
+    </item>
+    
+    <item>
+        <title>! Ремонт туалета на лелевела</title>
+        <link>https://<username>.github.io/<repo>/Memory.xml</link>
+        <description></description>
+        <category>A</category>
+        <guid>task-4</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
+    </item>
+    
+    <item>
+        <title>! Отделить Дигитакт и сделать 16+16 премиум техно паттернс</title>
+        <link>https://<username>.github.io/<repo>/Memory.xml</link>
+        <description></description>
+        <category>A</category>
+        <guid>task-5</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -38,8 +56,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description>2025-12-01</description>
         <category>B</category>
-        <guid>task-4</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-6</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -47,8 +65,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description></description>
         <category>B</category>
-        <guid>task-5</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-7</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -56,8 +74,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description></description>
         <category>B</category>
-        <guid>task-6</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-8</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -65,8 +83,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description></description>
         <category>C</category>
-        <guid>task-7</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-9</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -74,8 +92,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description></description>
         <category>C</category>
-        <guid>task-8</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-10</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -83,8 +101,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description></description>
         <category>C</category>
-        <guid>task-9</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-11</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -92,8 +110,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description></description>
         <category>D</category>
-        <guid>task-10</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-12</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -101,8 +119,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description></description>
         <category>D</category>
-        <guid>task-11</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-13</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -110,8 +128,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description></description>
         <category>D</category>
-        <guid>task-12</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-14</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -119,8 +137,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description></description>
         <category>D</category>
-        <guid>task-13</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-15</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
     <item>
@@ -128,8 +146,8 @@
         <link>https://<username>.github.io/<repo>/Memory.xml</link>
         <description>2025-12-04</description>
         <category>D</category>
-        <guid>task-14</guid>
-        <pubDate>Sat, 29 Nov 2025 03:45:31 +0000</pubDate>
+        <guid>task-16</guid>
+        <pubDate>Sun, 30 Nov 2025 14:20:35 +0000</pubDate>
     </item>
     
 </channel>
